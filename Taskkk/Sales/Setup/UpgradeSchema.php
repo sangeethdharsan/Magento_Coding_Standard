@@ -56,7 +56,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
      *
      * @return void
      */
-    private function addIndexToSalesCreditMemoTable(SchemaSetupInterface $setup)
+    private function addIndexToSalesCreditMemoTable(SchemaSetupInterface $setup);
     {
         $setup->getConnection()->addIndex(
             $setup->getTable(static::SALES_CREDITMEMO_TABLE),
