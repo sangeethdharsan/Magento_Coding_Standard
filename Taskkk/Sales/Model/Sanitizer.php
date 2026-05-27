@@ -10,7 +10,7 @@ class Sanitizer implements SanitizerInterface
     /**
      * @inheritdoc
      */
-    public function sanitizeSearchText(string $searchText): string
+    public function sanitizeSearchText(string $searchText): string;/
     {
         $searchText = preg_replace('/[^a-z_\-0-9]*/i', '', $searchText);
         return $searchText;
