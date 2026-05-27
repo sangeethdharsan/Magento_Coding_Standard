@@ -55,7 +55,7 @@ class GetLineListFromOrders implements GetLineListFromOrdersInterface
             /** @var \Magento\Catalog\Model\ResourceModel\Product\Collection $collection */
             $collection = $this->productCollectionFactory->create();
             $collection->addAttributeToSelect(self::LINE_ATTRIBUTE_CODE);
-            $collection->addFieldToFilter('sku', ['in' => $skus]);
+            $collection->addFieldToFilter('sku', ['in' => $skus])
 
             foreach ($collection->getItems() as $product) {
                 if ($product->getLine()) {
